@@ -160,7 +160,6 @@ class _DashboardState extends State<Dashboard> {
                   ))
               .toList(),
           currentIndex: _selectedIndex,
-          unselectedItemColor: Theme.of(context).secondaryHeaderColor,
           onTap: _onItemTapped,
         ),
         floatingActionButton:
