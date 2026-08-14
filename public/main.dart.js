@@ -31905,7 +31905,7 @@ _.X$=0
 _.a7$=c
 _.aD$=_.aJ$=0},
 afG:function afG(){},
-afK:function afK(){},
+afK:function afK(a){this.a=a},
 afL:function afL(){},
 afH:function afH(){},
 afI:function afI(){},
@@ -111906,21 +111906,24 @@ for(o=q.b,n=o.length,m=J.aS(p),l=0;l<o.length;o.length===n||(0,A.K)(o),++l){k=o[
 j=m.i(p,k.a)
 if(j!=null)k.aCc(j)}}return A.B(null,r)}})
 return A.C($async$GN,r)},
-GO(){var s=0,r=A.D(t.S),q,p=this,o,n,m
+GO(){var s=0,r=A.D(t.S),q,p=this,o,n,m,l,k,j,i,h
 var $async$GO=A.E(function(a,b){if(a===1)return A.A(b,r)
-for(;;)switch(s){case 0:n=A.a2i()
+for(;;)switch(s){case 0:i=A.a2i()
 s=3
-return A.w(A.bwq(A.f6(n.gw7(n)+"/locations.json?t="+Date.now(),0,null)),$async$GO)
-case 3:m=b
-if(m.b!==200)throw A.e(A.d1("Published locations are not available yet."))
-o=t.kc.a(J.bs(t.a.a(B.b7.rG(0,A.bcj(A.bb4(m.e)).fz(0,m.w),null)),"trackers"))
-if(o==null)o=[]
-n=J.k3(o,new A.afK(),t.Z2)
-n=A.a1(n,n.$ti.h("ax.E"))
-p.b=n
+return A.w(A.bwq(A.f6(i.gw7(i)+"/locations.json?t="+Date.now(),0,null)),$async$GO)
+case 3:h=b
+if(h.b!==200)throw A.e(A.d1("Published locations are not available yet."))
+i=t.Z2
+o=A.t(t.N,i)
+for(n=p.b,m=n.length,l=0;l<n.length;n.length===m||(0,A.K)(n),++l){k=n[l]
+o.m(0,k.a,k)}j=t.kc.a(J.bs(t.a.a(B.b7.rG(0,A.bcj(A.bb4(h.e)).fz(0,h.w),null)),"trackers"))
+if(j==null)j=[]
+i=J.k3(j,new A.afK(o),i)
+i=A.a1(i,i.$ti.h("ax.E"))
+p.b=i
 p.aa()
-n=p.b
-q=new A.aV(n,new A.afL(),A.a8(n).h("aV<1>")).gC(0)
+i=p.b
+q=new A.aV(i,new A.afL(),A.a8(i).h("aV<1>")).gC(0)
 s=1
 break
 case 1:return A.B(q,r)}})
@@ -112129,19 +112132,22 @@ g.Zc()
 return g},
 $S:267}
 A.afK.prototype={
-$1(a){var s,r,q,p,o,n,m,l,k="timestamp"
+$1(a){var s,r,q,p,o,n,m,l,k=null,j="timestamp"
 t.a.a(a)
 s=J.aS(a)
-r=s.i(a,"latitude")
-q=s.i(a,"longitude")
-p=typeof s.i(a,k)=="string"?A.bkk(A.bV(s.i(a,k))):null
-o=A.o(s.i(a,"id"))
-n=s.i(a,"name")
-n=A.o(n==null?"Tracker":n)
-m=A.o(s.i(a,"id"))
-l=r!=null&&q!=null?new A.ci(A.fC(r),A.fC(q)):null
+r=A.o(s.i(a,"id"))
+q=this.a.i(0,r)
+p=s.i(a,"latitude")
+o=s.i(a,"longitude")
+n=typeof s.i(a,j)=="string"?A.bkk(A.bV(s.i(a,j))):k
+if(n==null)n=q==null?k:q.w
+if(p!=null&&o!=null)m=new A.ci(A.fC(p),A.fC(o))
+else m=q==null?k:q.x
+l=s.i(a,"name")
+if(l==null)l=q==null?k:q.c
+l=A.o(l==null?"Tracker":l)
 s=s.i(a,"icon")
-return A.Tt(B.df,B.ia,p,"published:"+m,A.t(t.N,t.z),A.o(s==null?"mappin":s),o,!0,null,l,A.a([],t.Zc),n)},
+return A.Tt(B.df,B.ia,n,"published:"+r,A.t(t.N,t.z),A.o(s==null?"mappin":s),r,!0,k,m,A.a([],t.Zc),l)},
 $S:267}
 A.afL.prototype={
 $1(a){return a.x!=null},
